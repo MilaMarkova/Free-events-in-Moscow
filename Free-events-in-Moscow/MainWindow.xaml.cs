@@ -24,5 +24,19 @@ namespace Free_events_in_Moscow
         {
             InitializeComponent();
         }
+
+        List <Event> _events = new List<Event>();
+
+        private void buttonAdd_Click(object sender, RoutedEventArgs e)
+        {
+            var newevent = new Event(textBoxTitle.Text, textBoxType.Text, textBoxDate.Text, textBoxTime.Text, textBoxLocation.Text, textBoxDescription.Text);
+
+            _events.Add(newevent);
+
+            textBoxTitle.Text = " ";
+            textBoxType.Text = " ";
+            textBoxLocation.Text = " ";
+            textBoxDescription.Text = " ";
+        }
     }
 }
